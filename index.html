@@ -71,7 +71,7 @@
           let optionString = '';
           
           for (let file of data) {
-            if (/^\d+/.test(`${file.name}`)){
+            if (/^\d{4}-\d{2}-\d{2}.csv/.test(`${file.name}`)){
               let string_date = `${file.name}`.match(/^[0-9-]+/)[0];
               optionString += `<option value="${file.name}">${string_date}</option>`;
             }
